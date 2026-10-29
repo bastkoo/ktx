@@ -22,4 +22,13 @@ class PhieuDangKy(db.Model):
         db.ForeignKey("dottuyen.madottuyen"),
         nullable=False
     )
-    AnhDaiDien = db.Column(db.String)
+    MaLoaiPhong = db.Column(
+        db.Integer,
+        db.ForeignKey("LoaiPhong.MaLoai", name="fk_PhieuDangKy_LoaiPhong"),
+    nullable=True
+)
+
+    loai_phong = db.relationship(
+        "LoaiPhong",
+        back_populates="phieu_dang_kys"
+    )

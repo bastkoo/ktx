@@ -9,3 +9,8 @@ class LoaiPhong(db.Model):
     TenLoaiPhong = db.Column(db.String(50), nullable=False)
     Gia = db.Column(db.BigInteger, nullable=False)
     SoLuongToiDa = db.Column(db.Integer, nullable=False)
+    phieu_dang_kys = db.relationship(
+    "PhieuDangKy",
+    back_populates="loai_phong",
+    lazy=True
+    )
