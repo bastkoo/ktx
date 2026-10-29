@@ -1,0 +1,55 @@
+
+@import "tailwindcss";
+
+@theme {
+  /* Nền và bề mặt */
+  --color-ktx-background: #F5F6F8;
+  --color-ktx-surface: #FFFFFF;
+  --color-ktx-border: #E1E4E8;
+
+  /* Chữ */
+  --color-ktx-text: #343A40;
+  --color-ktx-text-muted: #64748B;
+
+  /* Màu nhấn chính */
+  --color-ktx-primary: #315B7D;
+  --color-ktx-secondary: #64748B;
+
+  /* Nhận diện logo */
+  --color-ktx-accent: #8F2635;
+  --color-ktx-accent-soft: #F8EDEE;
+
+  /* Trạng thái */
+  --color-ktx-success: #15803D;
+  --color-ktx-warning: #D97706;
+  --color-ktx-danger: #DC2626;
+}
+
+:root {
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--color-ktx-text);
+  background: var(--color-ktx-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-ktx-background);
+  color: var(--color-ktx-text);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
