@@ -5,11 +5,12 @@ from app.extensions import db
 class SinhVien(db.Model):
     __tablename__ = "SinhVien"
 
-    Id = db.Column(db.BigInteger, primary_key=True)
+    Id = db.Column(db.BigInteger, primary_key=True, autoincrement=True)
     MaSinhVien = db.Column(db.String(10), nullable=False)
     HoTen = db.Column(db.String(100), nullable=False)
     NgaySinh = db.Column(db.Date, nullable=False)
     SDT = db.Column(db.String(10), nullable=False)
+    email = db.Column(db.String(100), nullable=False)
     Khoa = db.Column(db.Integer, nullable=False)
     Lop = db.Column(db.String(50), nullable=False)
     Nganh = db.Column(db.String(50), nullable=False)
