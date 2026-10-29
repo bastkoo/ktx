@@ -5,7 +5,7 @@ from app.extensions import db
 class SinhVien(db.Model):
     __tablename__ = "SinhVien"
 
-    Id = db.Column(db.BigInteger, primary_key=True, autoincrement=True)
+    Id = db.Column(db.BigInteger, primary_key=True)
     MaSinhVien = db.Column(db.String(10), nullable=False)
     HoTen = db.Column(db.String(100), nullable=False)
     NgaySinh = db.Column(db.Date, nullable=False)

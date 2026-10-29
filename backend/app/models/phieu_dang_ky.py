@@ -5,10 +5,21 @@ from app.extensions import db
 class PhieuDangKy(db.Model):
     __tablename__ = "PhieuDangKy"
 
-    MaPhieu = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    IdSinhVien = db.Column(db.Integer, nullable=False)
+    MaPhieu = db.Column(db.Integer, primary_key=True)
+    IdSinhVien = db.Column(
+        db.Integer,
+        db.ForeignKey("SinhVien.Id"),
+        nullable=False
+    )
     TrangThai = db.Column(db.Integer, nullable=False)
-    MaNhanVien = db.Column(db.Integer)
+    MaNhanVien = db.Column(
+        db.Integer,
+        db.ForeignKey("NhanVien.MaNhanVien")
+    )
     NgayLap = db.Column(db.DateTime, nullable=False)
-    MaDotDangKy = db.Column(db.Integer, nullable=False)
+    MaDotDangKy = db.Column(
+        db.Integer,
+        db.ForeignKey("dottuyen.madottuyen"),
+        nullable=False
+    )
     AnhDaiDien = db.Column(db.String)
