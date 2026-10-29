@@ -12,3 +12,6 @@ class NhanVien(db.Model):
     SoCCCD = db.Column(db.String(12), nullable=False)
     VaiTro = db.Column(db.Integer, nullable=False)
     TrangThai = db.Column(db.Boolean, nullable=False)
+    AnhDaiDien = db.Column(db.String(), nullable=True)
+    TenTaiKhoan = db.Column(db.String(100), nullable=False)
+    MatKhau = db.Column(db.String(255), nullable=False)
