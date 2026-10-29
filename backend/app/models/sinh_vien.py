@@ -11,7 +11,7 @@ class SinhVien(db.Model):
     NgaySinh = db.Column(db.Date, nullable=False)
     SDT = db.Column(db.String(10), nullable=False)
     email = db.Column(db.String(100), nullable=False)
-    Khoa = db.Column(db.Integer, nullable=False)
+    Khoa = db.Column(db.String(100), nullable=False)
     Lop = db.Column(db.String(50), nullable=False)
     Nganh = db.Column(db.String(50), nullable=False)
     QuocGia = db.Column(db.String(50), nullable=False)
@@ -24,3 +24,4 @@ class SinhVien(db.Model):
     TenMe = db.Column(db.String(100))
     SDTMe = db.Column(db.String(10))
     GioiTinh = db.Column(db.Boolean, nullable=False)
+    Truong = db.Column(db.String(100), nullable=False)
